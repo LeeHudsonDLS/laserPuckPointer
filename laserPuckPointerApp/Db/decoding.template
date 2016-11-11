@@ -1,0 +1,22 @@
+#File: 	decoding.template
+#Desc:	Takes a demand input 1-64 and converts it into 4x16bit BCD values to
+#	command moves to pucks
+record(aSub, "$(P)$(S):DEMAND_DECODE") {
+  field(SNAM, "sendPuckDemand")
+  field(INPA, "$(P)$(S):DEMAND CP")
+  field(FTA, "LONG")
+  field(OUTA, "$(P)$(S):PUCK_DEMAND:BANK01.VAL PP")
+  field(OUTB, "$(P)$(S):PUCK_DEMAND:BANK02.VAL PP")
+  field(OUTC, "$(P)$(S):PUCK_DEMAND:BANK03.VAL PP")
+  field(OUTD, "$(P)$(S):PUCK_DEMAND:BANK04.VAL PP")
+  field(FTVA, "USHORT")
+  field(FTVB, "USHORT")
+  field(FTVC, "USHORT")
+  field(FTVD, "USHORT")
+}
+
+record(ai, "$(P)$(S):DEMAND") {
+  field(PINI, "YES")
+  field(VAL, "0")
+}
+###################################################################################

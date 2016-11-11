@@ -1,0 +1,6 @@
+#File: 	demandBank.template
+#Desc:	Takes care of a bank of 16 pucks, takes a demand from decoding.template
+#	and passes it to 16 puckValues.template instances
+record(mbbiDirect, $(P)$(S):PUCK_DEMAND:BANK$(BANK)) {
+}
+###################################################################################

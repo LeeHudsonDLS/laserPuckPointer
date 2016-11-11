@@ -1,0 +1,45 @@
+#File: 	puckValues.template
+#Desc:	Stores positions and executes moves for each puck
+record(calcout, $(P)$(S):PUCK-$(PUCK)_SELECT_CALC) {
+  field(OOPT, "Transition To Non-zero")
+  field(CALC, "A")
+  field(DTYP, "Soft Channel")
+  field(INPA, "$(P)$(S):$(DEMAND) CP")
+  field(OUT, "$(P)$(S):PUCK-$(PUCK):PAN_POSITION_SET.PROC")
+}
+
+record(ao, $(P)$(S):PUCK-$(PUCK):PAN_POSITION_SET) {
+  field(DESC, "Laser puck pointer pan axis setpoint")
+  field(PINI, "NO")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(DOL, "$(P)$(S):PUCK-$(PUCK):PAN_SET_VAL PP")
+  field(OMSL, "closed_loop")
+  field(OUT, "@laserPuckPointer.proto set_pan_position_no_read() $(PORT)")
+  field(FLNK, "$(P)$(S):PUCK-$(PUCK):TILT_POSITION_SET")
+}
+
+record(ao, $(P)$(S):PUCK-$(PUCK):TILT_POSITION_SET) {
+  field(DESC, "Laser puck pointer pan axis setpoint")
+  field(PINI, "NO")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(DOL, "$(P)$(S):PUCK-$(PUCK):TILT_SET_VAL PP")
+  field(OMSL, "closed_loop")
+  field(OUT, "@laserPuckPointer.proto set_tilt_position_no_read() $(PORT)")
+}
+
+#% autosave 1 VAL
+record(ao, $(P)$(S):PUCK-$(PUCK):PAN_SET_VAL) {
+  field(DESC, "")
+  field(PINI, "NO")
+  field(VAL, "$(PANPOS)")
+}
+
+#% autosave 1 VAL
+record(ao, $(P)$(S):PUCK-$(PUCK):TILT_SET_VAL) {
+  field(DESC, "")
+  field(PINI, "NO")
+  field(VAL, "$(TILTPOS)")
+}
+###################################################################################

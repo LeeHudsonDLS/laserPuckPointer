@@ -1,0 +1,89 @@
+file manualControl.template
+{
+pattern { P,	S,	PORT}
+	{ $(P),	$(S),	$(PORT)	}
+}
+
+file decoding.template
+{
+pattern { P,	S,	PORT}
+	{ $(P),	$(S),	$(PORT)	}
+}
+
+file demandBank.template
+{
+pattern { P,	S,	BANK}
+	{ $(P),	$(S),	01	}
+	{ $(P),	$(S),	02	}
+	{ $(P),	$(S),	03	}
+	{ $(P),	$(S),	04	}
+}
+
+file puckValues.template
+{
+pattern { P,	S,	PORT,		PUCK,	DEMAND,			PANPOS,	TILTPOS}
+	{ $(P),	$(S),	$(PORT),	01,	PUCK_DEMAND:BANK01.B0,	101,	201	}		
+	{ $(P),	$(S),	$(PORT),	02,	PUCK_DEMAND:BANK01.B1,	102,	202	}
+	{ $(P),	$(S),	$(PORT),	03,	PUCK_DEMAND:BANK01.B2,	103,	203	}
+	{ $(P),	$(S),	$(PORT),	04,	PUCK_DEMAND:BANK01.B3,	104,	204	}
+	{ $(P),	$(S),	$(PORT),	05,	PUCK_DEMAND:BANK01.B4,	105,	205	}
+	{ $(P),	$(S),	$(PORT),	06,	PUCK_DEMAND:BANK01.B5,	106,	206	}
+	{ $(P),	$(S),	$(PORT),	07,	PUCK_DEMAND:BANK01.B6,	107,	207	}
+	{ $(P),	$(S),	$(PORT),	08,	PUCK_DEMAND:BANK01.B7,	108,	208	}
+	{ $(P),	$(S),	$(PORT),	09,	PUCK_DEMAND:BANK01.B8,	109,	209	}
+	{ $(P),	$(S),	$(PORT),	10,	PUCK_DEMAND:BANK01.B9,	110,	210	}
+	{ $(P),	$(S),	$(PORT),	11,	PUCK_DEMAND:BANK01.BA,	111,	211	}
+	{ $(P),	$(S),	$(PORT),	12,	PUCK_DEMAND:BANK01.BB,	112,	212	}
+	{ $(P),	$(S),	$(PORT),	13,	PUCK_DEMAND:BANK01.BC,	113,	213	}
+	{ $(P),	$(S),	$(PORT),	14,	PUCK_DEMAND:BANK01.BD,	114,	214	}
+	{ $(P),	$(S),	$(PORT),	15,	PUCK_DEMAND:BANK01.BE,	115,	215	}
+	{ $(P),	$(S),	$(PORT),	16,	PUCK_DEMAND:BANK01.BF,	116,	216	}
+	{ $(P),	$(S),	$(PORT),	17,	PUCK_DEMAND:BANK02.B0,	117,	217	}
+	{ $(P),	$(S),	$(PORT),	18,	PUCK_DEMAND:BANK02.B1,	118,	218	}
+	{ $(P),	$(S),	$(PORT),	19,	PUCK_DEMAND:BANK02.B2,	119,	219	}
+	{ $(P),	$(S),	$(PORT),	20,	PUCK_DEMAND:BANK02.B3,	120,	220	}
+	{ $(P),	$(S),	$(PORT),	21,	PUCK_DEMAND:BANK02.B4,	121,	221	}
+	{ $(P),	$(S),	$(PORT),	22,	PUCK_DEMAND:BANK02.B5,	122,	222	}
+	{ $(P),	$(S),	$(PORT),	23,	PUCK_DEMAND:BANK02.B6,	123,	223	}
+	{ $(P),	$(S),	$(PORT),	24,	PUCK_DEMAND:BANK02.B7,	124,	224	}
+	{ $(P),	$(S),	$(PORT),	25,	PUCK_DEMAND:BANK02.B8,	125,	225	}
+	{ $(P),	$(S),	$(PORT),	26,	PUCK_DEMAND:BANK02.B9,	126,	226	}
+	{ $(P),	$(S),	$(PORT),	27,	PUCK_DEMAND:BANK02.BA,	127,	227	}
+	{ $(P),	$(S),	$(PORT),	28,	PUCK_DEMAND:BANK02.BB,	128,	228	}
+	{ $(P),	$(S),	$(PORT),	29,	PUCK_DEMAND:BANK02.BC,	129,	229	}
+	{ $(P),	$(S),	$(PORT),	30,	PUCK_DEMAND:BANK02.BD,	130,	230	}
+	{ $(P),	$(S),	$(PORT),	31,	PUCK_DEMAND:BANK02.BE,	131,	231	}
+	{ $(P),	$(S),	$(PORT),	32,	PUCK_DEMAND:BANK02.BF,	132,	232	}
+	{ $(P),	$(S),	$(PORT),	33,	PUCK_DEMAND:BANK03.B0,	133,	233	}
+	{ $(P),	$(S),	$(PORT),	34,	PUCK_DEMAND:BANK03.B1,	134,	234	}
+	{ $(P),	$(S),	$(PORT),	35,	PUCK_DEMAND:BANK03.B2,	135,	235	}
+	{ $(P),	$(S),	$(PORT),	36,	PUCK_DEMAND:BANK03.B3,	136,	236	}
+	{ $(P),	$(S),	$(PORT),	37,	PUCK_DEMAND:BANK03.B4,	137,	237	}
+	{ $(P),	$(S),	$(PORT),	38,	PUCK_DEMAND:BANK03.B5,	138,	238	}
+	{ $(P),	$(S),	$(PORT),	39,	PUCK_DEMAND:BANK03.B6,	139,	239	}
+	{ $(P),	$(S),	$(PORT),	40,	PUCK_DEMAND:BANK03.B7,	140,	240	}
+	{ $(P),	$(S),	$(PORT),	41,	PUCK_DEMAND:BANK03.B8,	141,	241	}
+	{ $(P),	$(S),	$(PORT),	42,	PUCK_DEMAND:BANK03.B9,	142,	242	}
+	{ $(P),	$(S),	$(PORT),	43,	PUCK_DEMAND:BANK03.BA,	143,	243	}
+	{ $(P),	$(S),	$(PORT),	44,	PUCK_DEMAND:BANK03.BB,	144,	244	}
+	{ $(P),	$(S),	$(PORT),	45,	PUCK_DEMAND:BANK03.BC,	145,	245	}
+	{ $(P),	$(S),	$(PORT),	46,	PUCK_DEMAND:BANK03.BD,	146,	246	}
+	{ $(P),	$(S),	$(PORT),	47,	PUCK_DEMAND:BANK03.BE,	147,	247	}
+	{ $(P),	$(S),	$(PORT),	48,	PUCK_DEMAND:BANK03.BF,	148,	248	}
+	{ $(P),	$(S),	$(PORT),	49,	PUCK_DEMAND:BANK04.B0,	149,	249	}
+	{ $(P),	$(S),	$(PORT),	50,	PUCK_DEMAND:BANK04.B1,	150,	250	}
+	{ $(P),	$(S),	$(PORT),	51,	PUCK_DEMAND:BANK04.B2,	151,	251	}
+	{ $(P),	$(S),	$(PORT),	52,	PUCK_DEMAND:BANK04.B3,	152,	252	}
+	{ $(P),	$(S),	$(PORT),	53,	PUCK_DEMAND:BANK04.B4,	153,	253	}
+	{ $(P),	$(S),	$(PORT),	54,	PUCK_DEMAND:BANK04.B5,	154,	254	}
+	{ $(P),	$(S),	$(PORT),	55,	PUCK_DEMAND:BANK04.B6,	155,	255	}
+	{ $(P),	$(S),	$(PORT),	56,	PUCK_DEMAND:BANK04.B7,	156,	256	}
+	{ $(P),	$(S),	$(PORT),	57,	PUCK_DEMAND:BANK04.B8,	157,	257	}
+	{ $(P),	$(S),	$(PORT),	58,	PUCK_DEMAND:BANK04.B9,	158,	258	}
+	{ $(P),	$(S),	$(PORT),	59,	PUCK_DEMAND:BANK04.BA,	159,	259	}
+	{ $(P),	$(S),	$(PORT),	60,	PUCK_DEMAND:BANK04.BB,	160,	260	}
+	{ $(P),	$(S),	$(PORT),	61,	PUCK_DEMAND:BANK04.BC,	161,	261	}
+	{ $(P),	$(S),	$(PORT),	62,	PUCK_DEMAND:BANK04.BD,	162,	262	}
+	{ $(P),	$(S),	$(PORT),	63,	PUCK_DEMAND:BANK04.BE,	163,	263	}
+	{ $(P),	$(S),	$(PORT),	64,	PUCK_DEMAND:BANK04.BF,	164,	264	}
+}

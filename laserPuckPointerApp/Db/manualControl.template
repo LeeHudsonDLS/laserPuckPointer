@@ -1,0 +1,86 @@
+#File: 	manualControl.template
+#Desc:	Allows direct control of Pan, Tilt, Mode and laser.
+record(ai, $(P)$(S):PAN_POSITION_RBV) {
+  field(DESC, "Laser puck pointer pan axis readback")
+  field(SCAN, ".2 second")
+  field(DTYP, "stream")
+  field(INP, "@laserPuckPointer.proto get_pan_position() $(PORT)")
+  field(PINI, "YES")
+}
+
+record(ao, $(P)$(S):PAN_POSITION_VAL) {
+  field(DESC, "Laser puck pointer pan axis setpoint")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@laserPuckPointer.proto set_pan_position() $(PORT)")
+}
+
+#record(ao, $(P)$(S):PAN_POSITION_SET) {
+#  field(DESC, "Laser puck pointer pan axis setpoint")
+#  field(PINI, "YES")
+#  field(DTYP, "stream")
+#  field(OUT, "@laserPuckPointer.proto set_pan_position_no_read() $(PORT)")
+#  field(FLNK, "$(P)$(S):TILT_POSITION_SET")
+#}
+
+record(ai, $(P)$(S):TILT_POSITION_RBV) {
+  field(DESC, "Laser puck pointer tilt axis readback")
+  field(SCAN, ".2 second")
+  field(DTYP, "stream")
+  field(INP, "@laserPuckPointer.proto get_tilt_position() $(PORT)")
+  field(PINI, "YES")
+}
+
+record(ao, $(P)$(S):TILT_POSITION_VAL) {
+  field(DESC, "Laser puck pointer tilt axis setpoint")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@laserPuckPointer.proto set_tilt_position() $(PORT)")
+}
+
+#record(ao, $(P)$(S):TILT_POSITION_SET) {
+#  field(DESC, "Laser puck pointer tilt axis setpoint")
+#  field(PINI, "YES")
+#  field(DTYP, "stream")
+#  field(OUT, "@laserPuckPointer.proto set_tilt_position_no_read() $(PORT)")
+#}
+
+record(bi, $(P)$(S):MODE_RBV) {
+  #field(DESC, "Laser puck pointer operation mode readback")
+  field(SCAN, ".1 second")
+  field(DTYP, "stream")
+  field(INP, "@laserPuckPointer.proto get_mode() $(PORT)")
+  field(PINI, "YES")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+
+record(bo, $(P)$(S):MODE_VAL) {
+  #field(DESC, "Laser puck pointer operation mode setpoint")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@laserPuckPointer.proto set_mode() $(PORT)")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+
+record(bi, $(P)$(S):LASER_RBV) {
+  field(DESC, "Laser puck pointer laser on/off readback")
+  field(SCAN, ".1 second")
+  field(DTYP, "stream")
+  field(INP, "@laserPuckPointer.proto get_laser_status() $(PORT)")
+  field(PINI, "YES")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+record(bo, $(P)$(S):LASER_VAL) {
+  field(DESC, "Laser puck pointer laser on/off setpoint")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@laserPuckPointer.proto set_laser_status() $(PORT)")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+###################################################################################
+
