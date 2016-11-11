@@ -19,88 +19,63 @@ separator = "";
 
 ####################################################################### 
 #Controller Status 
- 
-get_version{
-  out "*IDN?"; 
-  in "%40c";
-}
 
-# requests last error, and resets error code to 0 (no error)
-get_last_error{
-  out "ERR?"; 
+
+# requests position of pan axis
+get_pan_position{
+  out "P?"; 
   in "%d";
 }
 
-# Requests status register value
-get_status_register{
-  out "SRG? \$1 1";
-  in "\$1 1=%X";
+# requests position of tilt axis
+get_tilt_position{
+  out "T?"; 
+  in "%d";
 }
 
-freeCommand { out "%s" ; in "%(\$1:CMD_RESPONSE)255c" ; }
-
-#######################################################################
-#Axis Control Mode
-#### /$1 should be passed in order to identify axis
-
-get_servo_mode{
-  out "SVO? \$1";
-  in "\$1=%{0|1}";
+# requests current operation mode, local or remote
+get_mode{
+  out "M?";
+  in "%{L|R}";
 }
 
-set_servo_mode{
-  out "SVO \$1 %d";@init { out "SVO? \$1" ; in "\$1=%{0|1}"; }
+get_laser_status{
+  out "L?";
+  in "%{0|1}";
 }
 
 
-#######################################################################
-#reference point
-# PI Q-545 must have its axis referenced (essentially this means homed)
-# before it can accept move commands. When the 
-
-get_reference_mode{
-  out "RON? \$1";
-  in "\$1=%{0|1}";
+# sets pan position
+set_pan_position{
+  out "P%d";
+  @init { get_pan_position; }
 }
 
-get_reference_result{
-  out "FRF? \$1";
-  in "\$1=%{0|1}";
+# sets pan position
+set_pan_position_no_read{
+  out "P%d";
 }
 
-# this will move the stage to one of its limits (usually negative)
-do_reference_move{
-  out "FRF \$1 ";
+# sets tilt position
+set_tilt_position{
+  out "T%d";
+  @init { get_tilt_position; }
+}
+
+# sets tilt position
+set_tilt_position_no_read{
+  out "T%d";
+}
+
+# sets operation mode, local or remote
+set_mode{
+  out "M%{L|R}";
+  @init { get_mode; }
+}
+
+set_laser_status{
+  out "L%{0|1}";
+  @init { get_laser_status; }
 }
 
 
-######################################################################
-#Close Loop Control Mode
-# \$1 is the axis
-
-halt_motion{
-  out "HLT \$1";
-}
-
-get_demand_pos{
-  out "MOV? \$1";
-  in "\$1=%f";
-}
-
-set_demand_pos{
-  out "MOV \$1 %f";@init { out "MOV? \$1" ; in "\$1=%f"; }
-}
-
-set_relative_pos{
-  out "MVR \$1 %f";
-}
-
-get_current_pos{
-  out "POS? \$1";
-  in "\$1=%f";
-}
-
-get_servo_on_target{
-  out "ONT? \$1";
-  in "\$1=%{0|1}";
-}
