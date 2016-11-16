@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1243
-y 667
+x 1167
+y 182
 w 600
-h 500
+h 280
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -19,6 +19,7 @@ ctlBgColor1 index 0
 ctlBgColor2 index 14
 topShadowColor index 0
 botShadowColor index 14
+title "Laser Puck Pointer"
 endScreenProperties
 
 # (Rectangle)
@@ -28,9 +29,9 @@ major 4
 minor 0
 release 0
 x 25
-y 59
+y 26
 w 534
-h 158
+h 200
 lineColor index 14
 fillColor index 0
 endObjectProperties
@@ -42,7 +43,7 @@ major 4
 minor 6
 release 0
 x 206
-y 81
+y 48
 w 165
 h 21
 controlPv "$(P)$(S):PAN_POSITION_RBV"
@@ -64,7 +65,7 @@ major 4
 minor 6
 release 0
 x 206
-y 115
+y 82
 w 165
 h 21
 controlPv "$(P)$(S):TILT_POSITION_RBV"
@@ -86,7 +87,7 @@ major 4
 minor 6
 release 0
 x 206
-y 149
+y 116
 w 165
 h 21
 controlPv "$(P)$(S):MODE_RBV"
@@ -108,7 +109,7 @@ major 4
 minor 6
 release 0
 x 206
-y 183
+y 150
 w 165
 h 21
 controlPv "$(P)$(S):LASER_RBV"
@@ -130,7 +131,7 @@ major 4
 minor 1
 release 1
 x 43
-y 81
+y 48
 w 78
 h 21
 font "arial-medium-r-18.0"
@@ -150,7 +151,7 @@ major 10
 minor 0
 release 0
 x 423
-y 81
+y 48
 w 105
 h 24
 controlPv "$(P)$(S):PAN_POSITION_VAL"
@@ -168,7 +169,7 @@ major 10
 minor 0
 release 0
 x 423
-y 115
+y 82
 w 105
 h 24
 controlPv "$(P)$(S):TILT_POSITION_VAL"
@@ -186,7 +187,7 @@ major 4
 minor 1
 release 1
 x 43
-y 115
+y 82
 w 69
 h 21
 font "arial-medium-r-18.0"
@@ -206,7 +207,7 @@ major 4
 minor 1
 release 0
 x 423
-y 149
+y 116
 w 105
 h 24
 fgColor index 14
@@ -230,7 +231,7 @@ major 4
 minor 1
 release 0
 x 423
-y 183
+y 150
 w 105
 h 24
 fgColor index 14
@@ -254,7 +255,7 @@ major 4
 minor 1
 release 1
 x 43
-y 149
+y 116
 w 141
 h 21
 font "arial-medium-r-18.0"
@@ -274,7 +275,7 @@ major 4
 minor 1
 release 1
 x 43
-y 183
+y 150
 w 109
 h 21
 font "arial-medium-r-18.0"
@@ -294,7 +295,7 @@ major 4
 minor 1
 release 1
 x 34
-y 49
+y 16
 w 126
 h 21
 font "arial-medium-r-18.0"
@@ -306,26 +307,69 @@ value {
 autoSize
 endObjectProperties
 
-# (Text Monitor)
-object activeXTextDspClass:noedit
+# (Related Display)
+object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 6
+minor 4
 release 0
-x 143
-y 275
-w 165
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK01"
+x 23
+y 236
+w 102
+h 24
+fgColor index 43
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
 font "arial-medium-r-18.0"
-fgColor index 16
-bgColor index 11
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
+buttonLabel "Teach"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "data/teachGui.edl"
+}
+symbols {
+  0 "P=$(P),S=$(S)"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 452
+y 236
+w 105
+h 32
+fgColor index 46
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-18.0"
+3d
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 43
+y 184
+w 123
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Puck Demand:"
+}
+autoSize
 endObjectProperties
 
 # (Textentry)
@@ -334,8 +378,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 12
-y 274
+x 206
+y 184
 w 105
 h 24
 controlPv "$(P)$(S):DEMAND"
@@ -344,135 +388,5 @@ fgAlarm
 bgColor index 0
 fill
 font "arial-medium-r-18.0"
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 328
-y 275
-w 166
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK01"
-lineColor index 14
-onColor index 15
-offColor index 19
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 328
-y 306
-w 166
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK02"
-lineColor index 14
-onColor index 15
-offColor index 19
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 143
-y 368
-w 165
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK04"
-font "arial-medium-r-18.0"
-fgColor index 16
-bgColor index 11
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 328
-y 368
-w 166
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK04"
-lineColor index 14
-onColor index 15
-offColor index 19
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 143
-y 306
-w 165
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK02"
-font "arial-medium-r-18.0"
-fgColor index 16
-bgColor index 11
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 328
-y 337
-w 166
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK03"
-lineColor index 14
-onColor index 15
-offColor index 19
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 143
-y 337
-w 165
-h 21
-controlPv "$(P)$(S):PUCK_DEMAND:BANK03"
-font "arial-medium-r-18.0"
-fgColor index 16
-bgColor index 11
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
 endObjectProperties
 
