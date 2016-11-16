@@ -1,0 +1,5755 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 342
+y 440
+w 1500
+h 650
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "Puck Position Teaching"
+endScreenProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 200
+y 54
+w 165
+h 21
+controlPv "$(P)$(S):TILT_POSITION_RBV"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 37
+y 54
+w 69
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Tilt Axis:"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 37
+y 20
+w 78
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Pan Axis:"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 200
+y 20
+w 165
+h 21
+controlPv "$(P)$(S):PAN_POSITION_RBV"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 129
+w 320
+h 458
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 129
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 129
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK01"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-01:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-01:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-01:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-01:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 158
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 158
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK02"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-02:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-02:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-02:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-02:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 187
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 187
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK03"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-03:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-03:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-03:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-03:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 216
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 216
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK04"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-04:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-04:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-04:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-04:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 245
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 245
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK05"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-05:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-05:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-05:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-05:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 274
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 274
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK06"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-06:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-06:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-06:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-06:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 303
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 303
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK07"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-07:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-07:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-07:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-07:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 332
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 332
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK08"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-08:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-08:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-08:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-08:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 361
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 361
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK09"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-09:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-09:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-09:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-09:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 390
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 390
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK10"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-10:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-10:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-10:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-10:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 419
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 419
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK11"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-11:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-11:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-11:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-11:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 448
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 448
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK12"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-12:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-12:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-12:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-12:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 477
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 477
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK13"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-13:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-13:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-13:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-13:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 506
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 506
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK14"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-14:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-14:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-14:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-14:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 535
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 535
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK15"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-15:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-15:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-15:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-15:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 564
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 20
+y 564
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK16"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-16:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-16:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 127
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-16:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 240
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-16:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 129
+w 320
+h 458
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 129
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 129
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK17"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-17:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-17:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-17:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-17:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 158
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 158
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK18"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-18:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-18:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-18:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-18:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 187
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 187
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK19"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-19:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-19:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-19:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-19:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 216
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 216
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK20"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-20:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-20:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-20:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-20:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 245
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 245
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK21"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-21:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-21:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-21:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-21:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 274
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 274
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK22"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-22:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-22:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-22:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-22:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 303
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 303
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK23"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-23:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-23:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-23:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-23:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 332
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 332
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK24"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-24:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-24:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-24:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-24:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 361
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 361
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK25"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-25:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-25:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-25:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-25:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 390
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 390
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK26"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-26:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-26:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-26:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-26:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 419
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 419
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK27"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-27:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-27:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-27:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-27:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 448
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 448
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK28"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-28:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-28:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-28:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-28:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 477
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 477
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK29"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-29:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-29:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-29:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-29:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 506
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 506
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK30"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-30:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-30:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-30:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-30:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 535
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 535
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK31"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-31:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-31:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-31:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-31:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 395
+y 564
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 395
+y 564
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK32"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-32:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-32:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 502
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-32:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 615
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-32:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 129
+w 320
+h 458
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 129
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 129
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK33"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-33:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-33:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-33:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-33:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 158
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 158
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK34"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-34:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-34:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-34:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-34:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 187
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 187
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK35"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-35:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-35:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-35:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-35:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 216
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 216
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK36"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-36:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-36:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-36:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-36:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 245
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 245
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK37"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-37:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-37:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-37:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-37:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 274
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 274
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK38"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-38:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-38:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-38:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-38:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 303
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 303
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK39"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-39:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-39:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-39:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-39:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 332
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 332
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK40"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-40:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-40:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-40:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-40:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 361
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 361
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK41"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-41:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-41:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-41:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-41:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 390
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 390
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK42"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-42:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-42:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-42:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-42:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 419
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 419
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK43"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-43:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-43:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-43:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-43:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 448
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 448
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK44"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-44:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-44:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-44:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-44:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 477
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 477
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK45"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-45:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-45:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-45:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-45:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 506
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 506
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK46"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-46:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-46:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-46:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-46:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 535
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 535
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK47"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-47:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-47:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-47:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-47:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 564
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 770
+y 564
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK48"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-48:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-48:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 877
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-48:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 990
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-48:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 129
+w 320
+h 458
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 129
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 129
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK49"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-49:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-49:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-49:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 130
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-49:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 158
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 158
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK50"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-50:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-50:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-50:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 159
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-50:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 187
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 187
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK51"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-51:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-51:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-51:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 188
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-51:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 216
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 216
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK52"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-52:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-52:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-52:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 217
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-52:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 245
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 245
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK53"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-53:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-53:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-53:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 246
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-53:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 274
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 274
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK54"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-54:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-54:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-54:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 275
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-54:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 303
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 303
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK55"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-55:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-55:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-55:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 304
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-55:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 332
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 332
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK56"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-56:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-56:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-56:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 333
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-56:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 361
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 361
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK57"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-57:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-57:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-57:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 362
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-57:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 390
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 390
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK58"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-58:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-58:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-58:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 391
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-58:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 419
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 419
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK59"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-59:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-59:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-59:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 420
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-59:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 448
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 448
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK60"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-60:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-60:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-60:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 449
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-60:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 477
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 477
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK61"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-61:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-61:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-61:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 478
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-61:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 506
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 506
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK62"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-62:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-62:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-62:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 507
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-62:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 535
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 535
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK63"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-63:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-63:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-63:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 536
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-63:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1145
+y 564
+w 320
+h 23
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 1145
+y 564
+w 88
+h 23
+fgColor index 14
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "PUCK64"
+numCmds 1
+command {
+  0 "caput $(P)$(S):PUCK-64:PAN_TEACH.PROC 1; caput $(P)$(S):PUCK-64:TILT_TEACH.PROC 1 "
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1252
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-64:PAN_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 1365
+y 565
+w 100
+h 21
+controlPv "$(P)$(S):PUCK-64:TILT_SET_VAL"
+font "arial-medium-r-18.0"
+fgColor index 16
+bgColor index 11
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 161
+y 100
+w 147
+h 21
+
+beginGroup
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 271
+y 100
+w 37
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "TILT"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 161
+y 100
+w 38
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PAN"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 534
+y 100
+w 147
+h 21
+
+beginGroup
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 644
+y 100
+w 37
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "TILT"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 534
+y 100
+w 38
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PAN"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 910
+y 100
+w 147
+h 21
+
+beginGroup
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 1020
+y 100
+w 37
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "TILT"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 910
+y 100
+w 38
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PAN"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1281
+y 100
+w 147
+h 21
+
+beginGroup
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 1391
+y 100
+w 37
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "TILT"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 1281
+y 100
+w 38
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PAN"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 1360
+y 611
+w 105
+h 32
+fgColor index 46
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-18.0"
+3d
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 643
+y 23
+w 195
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Puck Position Teaching"
+}
+autoSize
+endObjectProperties
+
