@@ -29,17 +29,36 @@ record(ao, $(P)$(S):PUCK-$(PUCK):TILT_POSITION_SET) {
   field(OUT, "@laserPuckPointer.proto set_tilt_position_no_read() $(PORT)")
 }
 
+record(ao, $(P)$(S):PUCK-$(PUCK):PAN_TEACH){
+  field(PINI, "NO")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(DOL, "$(P)$(S):PAN_POSITION_RBV PP")
+  field(OMSL, "closed_loop")
+  field(OUT, "$(P)$(S):PUCK-$(PUCK):PAN_SET_VAL PP")
+}
+
 #% autosave 1 VAL
 record(ao, $(P)$(S):PUCK-$(PUCK):PAN_SET_VAL) {
   field(DESC, "")
   field(PINI, "NO")
+  field(SCAN, "Passive")
   field(VAL, "$(PANPOS)")
 }
 
+record(ao, $(P)$(S):PUCK-$(PUCK):TILT_TEACH){
+  field(PINI, "NO")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(DOL, "$(P)$(S):TILT_POSITION_RBV PP")
+  field(OMSL, "closed_loop")
+  field(OUT, "$(P)$(S):PUCK-$(PUCK):TILT_SET_VAL PP")
+}
 #% autosave 1 VAL
 record(ao, $(P)$(S):PUCK-$(PUCK):TILT_SET_VAL) {
   field(DESC, "")
   field(PINI, "NO")
+  field(SCAN, "Passive")
   field(VAL, "$(TILTPOS)")
 }
 ###################################################################################
