@@ -18,8 +18,8 @@ pattern { P,	S,	PORT}
 
 file decoding.template
 {
-pattern { P,	S,	PORT}
-	{ $(P),	$(S),	$(PORT)	}
+pattern { P,	S,	PORT,		DEMAND_IN	}
+	{ $(P),	$(S),	$(PORT),	$(DEMAND_IN)	}
 }
 
 file demandBank.template
