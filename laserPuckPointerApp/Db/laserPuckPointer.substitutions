@@ -4,6 +4,18 @@ pattern { P,	S,	PORT}
 	{ $(P),	$(S),	$(PORT)	}
 }
 
+file autoLaserOn.template
+{
+pattern { P,	S,	PORT}
+	{ $(P),	$(S),	$(PORT)	}
+}
+
+file laserOnTimer.template
+{
+pattern { P,	S,	PORT}
+	{ $(P),	$(S),	$(PORT)	}
+}
+
 file decoding.template
 {
 pattern { P,	S,	PORT}

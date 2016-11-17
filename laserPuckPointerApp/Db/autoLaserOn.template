@@ -1,0 +1,22 @@
+# File:	autoLaserOn.template
+# Desc:	Turn the laser on when either axis is moved, either through a manual move or
+# a puck demand
+record(calcout, $(P)$(S):TRIGGER_LASER_CALC) {
+  field(INPA, "$(P)$(S):DEMAND CP")
+  field(INPB, "$(P)$(S):TILT_POSITION_VAL CP")
+  field(INPC, "$(P)$(S):PAN_POSITION_VAL CP")
+  field(OUT, "$(P)$(S):LASER_VAL PP")
+  field(SCAN, "Passive")
+  field(CALC, "1")
+
+}
+
+record(bo, $(P)$(S):LASER_VAL) {
+  field(DESC, "Laser puck pointer laser on/off setpoint")
+  field(PINI, "YES")
+  field(DTYP, "stream")
+  field(OUT, "@laserPuckPointer.proto set_laser_status() $(PORT)")
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+###################################################################################

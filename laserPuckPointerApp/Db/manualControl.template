@@ -15,13 +15,6 @@ record(ao, $(P)$(S):PAN_POSITION_VAL) {
   field(OUT, "@laserPuckPointer.proto set_pan_position() $(PORT)")
 }
 
-#record(ao, $(P)$(S):PAN_POSITION_SET) {
-#  field(DESC, "Laser puck pointer pan axis setpoint")
-#  field(PINI, "YES")
-#  field(DTYP, "stream")
-#  field(OUT, "@laserPuckPointer.proto set_pan_position_no_read() $(PORT)")
-#  field(FLNK, "$(P)$(S):TILT_POSITION_SET")
-#}
 
 record(ai, $(P)$(S):TILT_POSITION_RBV) {
   field(DESC, "Laser puck pointer tilt axis readback")
@@ -38,12 +31,6 @@ record(ao, $(P)$(S):TILT_POSITION_VAL) {
   field(OUT, "@laserPuckPointer.proto set_tilt_position() $(PORT)")
 }
 
-#record(ao, $(P)$(S):TILT_POSITION_SET) {
-#  field(DESC, "Laser puck pointer tilt axis setpoint")
-#  field(PINI, "YES")
-#  field(DTYP, "stream")
-#  field(OUT, "@laserPuckPointer.proto set_tilt_position_no_read() $(PORT)")
-#}
 
 record(bi, $(P)$(S):MODE_RBV) {
   #field(DESC, "Laser puck pointer operation mode readback")
@@ -74,7 +61,8 @@ record(bi, $(P)$(S):LASER_RBV) {
   field(ONAM, "On")
 }
 
-record(bo, $(P)$(S):LASER_VAL) {
+# To turn on the laser manually and override the
+record(bo, $(P)$(S):LASER_VAL_MANUAL) {
   field(DESC, "Laser puck pointer laser on/off setpoint")
   field(PINI, "YES")
   field(DTYP, "stream")
