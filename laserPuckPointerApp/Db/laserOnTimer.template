@@ -17,6 +17,8 @@ record(calcout, $(P)$(S):LASER_ON_COUNTER_CALC) {
 record(ai, $(P)$(S):LASER_ON_TIMER) {
    field(VAL, "0")
 }
+
+#% autosave 1 VAL
 record(ai, $(P)$(S):LASER_ON_TIME_SETPOINT) {
    field(VAL, "5")
    field(PINI, "YES")
