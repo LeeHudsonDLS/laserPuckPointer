@@ -19,4 +19,11 @@ record(ai, "$(P)$(S):DEMAND") {
   field(PINI, "YES")
   field(VAL, "0")
 }
+
+record(ao, "$(P)$(S):DEMAND_FROM_VISION_SYSTEM") {
+  field(PINI, "NO")
+  field(OUT, "$(P)$(S):DEMAND PP")
+  field(DOL, "$(DEMAND_IN) CP")
+  field(OMSL, "closed_loop")
+}
 ###################################################################################
