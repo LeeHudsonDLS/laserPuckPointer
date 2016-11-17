@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1167
-y 182
+x 396
+y 126
 w 600
-h 280
+h 320
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -31,7 +31,7 @@ release 0
 x 25
 y 26
 w 534
-h 200
+h 226
 lineColor index 14
 fillColor index 0
 endObjectProperties
@@ -240,7 +240,7 @@ offColor index 5
 inconsistentColor index 5
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P)$(S):LASER_VAL"
+controlPv "$(P)$(S):LASER_VAL_MANUAL"
 onLabel "Laser"
 offLabel "Laser"
 3d
@@ -314,7 +314,7 @@ major 4
 minor 4
 release 0
 x 23
-y 236
+y 264
 w 102
 h 24
 fgColor index 43
@@ -340,7 +340,7 @@ major 4
 minor 1
 release 0
 x 452
-y 236
+y 264
 w 105
 h 32
 fgColor index 46
@@ -383,6 +383,44 @@ y 184
 w 105
 h 24
 controlPv "$(P)$(S):DEMAND"
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "arial-medium-r-18.0"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 43
+y 217
+w 129
+h 21
+font "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Laser On Time:"
+}
+autoSize
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 206
+y 217
+w 105
+h 24
+controlPv "$(P)$(S):LASER_ON_TIME_SETPOINT"
 fgColor index 14
 fgAlarm
 bgColor index 0
