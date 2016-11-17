@@ -1,10 +1,6 @@
 #######################################################################
 #
-# Stream device protocol for PI C-877 Command Interface (for PI 628 peizo stage)
-#
-# 
-# Device is supplied set to 115200 baud, 8 bit, 1 stop bit, no parity, rts/cts
-# (but communications parameters can be changed and saved to NV ram in the device)
+# Stream device protocol for Arduino based Pan Tilt stage
 #
 #######################################################################
 
@@ -44,7 +40,6 @@ get_laser_status{
   in "%{0|1}";
 }
 
-
 # sets pan position
 set_pan_position{
   out "P%d";
@@ -77,5 +72,4 @@ set_laser_status{
   out "L%{0|1}";
   @init { get_laser_status; }
 }
-
 
