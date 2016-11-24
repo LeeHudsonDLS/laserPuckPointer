@@ -1,7 +1,7 @@
 file manualControl.template
 {
-pattern { P,	S,	PORT}
-	{ $(P),	$(S),	$(PORT)	}
+pattern { P,	S,	SCAN,		PORT}
+	{ $(P),	$(S),	$(SCAN),	$(PORT)	}
 }
 
 file autoLaserOn.template
