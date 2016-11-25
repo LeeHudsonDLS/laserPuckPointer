@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 396
-y 126
+x 400
+y 180
 w 600
 h 320
 font "arial-medium-r-18.0"
@@ -46,7 +46,7 @@ x 206
 y 48
 w 165
 h 21
-controlPv "$(P)$(S):PAN_POSITION_RBV"
+controlPv "$(P):PAN_POSITION_RBV"
 font "arial-medium-r-18.0"
 fgColor index 16
 bgColor index 11
@@ -68,7 +68,7 @@ x 206
 y 82
 w 165
 h 21
-controlPv "$(P)$(S):TILT_POSITION_RBV"
+controlPv "$(P):TILT_POSITION_RBV"
 font "arial-medium-r-18.0"
 fgColor index 16
 bgColor index 11
@@ -90,7 +90,7 @@ x 206
 y 116
 w 165
 h 21
-controlPv "$(P)$(S):MODE_RBV"
+controlPv "$(P):MODE_RBV"
 font "arial-medium-r-18.0"
 fgColor index 16
 bgColor index 11
@@ -112,7 +112,7 @@ x 206
 y 150
 w 165
 h 21
-controlPv "$(P)$(S):LASER_RBV"
+controlPv "$(P):LASER_RBV"
 font "arial-medium-r-18.0"
 fgColor index 16
 bgColor index 11
@@ -154,7 +154,7 @@ x 423
 y 48
 w 105
 h 24
-controlPv "$(P)$(S):PAN_POSITION_VAL"
+controlPv "$(P):PAN_POSITION_VAL"
 fgColor index 14
 fgAlarm
 bgColor index 0
@@ -172,7 +172,7 @@ x 423
 y 82
 w 105
 h 24
-controlPv "$(P)$(S):TILT_POSITION_VAL"
+controlPv "$(P):TILT_POSITION_VAL"
 fgColor index 14
 fgAlarm
 bgColor index 0
@@ -216,7 +216,7 @@ offColor index 5
 inconsistentColor index 5
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P)$(S):MODE_VAL"
+controlPv "$(P):MODE_VAL"
 onLabel "Mode"
 offLabel "Mode"
 3d
@@ -240,7 +240,7 @@ offColor index 5
 inconsistentColor index 5
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P)$(S):LASER_VAL_MANUAL"
+controlPv "$(P):LASER_VAL_MANUAL"
 onLabel "Laser"
 offLabel "Laser"
 3d
@@ -326,10 +326,10 @@ buttonLabel "Teach"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "data/teachGui.edl"
+  0 "teachGui.edl"
 }
 symbols {
-  0 "P=$(P),S=$(S)"
+  0 "P=$(P)"
 }
 endObjectProperties
 
@@ -382,7 +382,7 @@ x 206
 y 184
 w 105
 h 24
-controlPv "$(P)$(S):DEMAND"
+controlPv "$(P):DEMAND"
 fgColor index 14
 fgAlarm
 bgColor index 0
@@ -420,7 +420,7 @@ x 206
 y 217
 w 105
 h 24
-controlPv "$(P)$(S):LASER_ON_TIME_SETPOINT"
+controlPv "$(P):LASER_ON_TIME_SETPOINT"
 fgColor index 14
 fgAlarm
 bgColor index 0
