@@ -19,7 +19,7 @@ Serial Protocol:
 #define TILT_POT_PIN	0
 #define PAN_SERVO_PIN	6
 #define PAN_POT_PIN		1
-#define LASER_PIN		13
+#define LASER_PIN		2
 
 //Serial baud rate
 #define BAUD_RATE	115200
