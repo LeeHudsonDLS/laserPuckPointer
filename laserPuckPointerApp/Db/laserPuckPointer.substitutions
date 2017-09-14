@@ -99,3 +99,9 @@ pattern { P,	S,	PORT,		PUCK,	DEMAND,			PANPOS,	TILTPOS,	BANK}
 	{ $(P),	"",	$(PORT),	63,	PUCK_DEMAND:BANK04.BE,	163,	263,		04	}
 	{ $(P),	"",	$(PORT),	64,	PUCK_DEMAND:BANK04.BF,	164,	264,		04	}
 }
+
+file iSpyBWrite.template
+{
+pattern { P,	S,  positionPV, robot,      bl}
+	    { $(P),	"",	$(DEMAND_IN), $(ROBOT)    $(BL)}
+}
