@@ -1,0 +1,44 @@
+# Start of support/laserPuckPointer/laserPuckPointerApp/Db/iSpyBWrite.template
+# Original Author: Lee Hudson 2017
+# 
+# Runs a python script that writes the selected puck into or out of the
+# ISpyB databas
+
+# % macro, p, Prefix
+# % macro, s, Suffix
+# % macro, positionPV, PV where the last loaded / unloaded puck position will be
+# % macro, bl, Beamline (used as arg in python script)
+# % macro, robot, Prefix for the robot where the barcodes are stored
+
+record(aSub, "$(P)$(S):ISPYB_WRITE") {
+  field(SNAM, "isbWrite")
+  field(INPA, "$(P)$(S):DBDOM")
+  field(INPB, "$(P)$(S):POSITION_READ ")
+  field(INPC, "$(P)$(S):INIT_ISPYB_WRITE")
+  field(INPD, "$(robot):FQCR_CAM:BARCODE_STORE")
+  field(INPE, "$(robot):PUCK_POSITION CP")
+  field(FTA, "STRING")
+  field(FTB, "USHORT")
+  field(FTC, "USHORT")
+  field(FTD, "STRING")
+  field(OUTA, "$(P)$(S):INIT_ISPYB_WRITE PP")
+  field(FTVA, "USHORT")
+  field(SCAN, "Passive")
+  field(PINI, "NO")
+}
+
+record(stringin, $(P)$(S):DBDOM) {
+  field(VAL, "$(bl)")
+}
+
+record(bo, $(P)$(S):INIT_ISPYB_WRITE) {
+  field(VAL, "0")
+}
+
+record(ai, $(P)$(S):POSITION_READ) {
+  field(INP, "$(positionPV) CP")
+  field(MDEL, "-1")
+}
+
+# End of support/laserPuckPointer/laserPuckPointerApp/Db/iSpyBWrite.template
+
