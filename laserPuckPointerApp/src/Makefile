@@ -18,6 +18,7 @@ laserPuckPointer_SRCS += laserPuckPointer_registerRecordDeviceDriver.cpp
 
 # Add locally compiled object code
 laserPuckPointer_SRCS += sendPuckDemand.c
+laserPuckPointer_SRCS += iSpyBWrite.c
 
 # We need to link this IOC Application against the EPICS Base libraries
 laserPuckPointer_LIBS += $(EPICS_BASE_IOC_LIBS)
