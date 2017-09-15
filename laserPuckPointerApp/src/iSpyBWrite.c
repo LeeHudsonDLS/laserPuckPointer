@@ -17,6 +17,13 @@
     position of that last barcode (INPB), the beamline domain (INPA)
     and runs a python script with those arguments to write the puck
     to the ISpyB Database.  
+
+    For this to work the following support modules need to be at least
+    the following versions:
+
+    mitsubishiRobot     2-6
+    FQCRBarcodeCamera   1-2
+    
 */
 static long isbWrite( aSubRecord *prec) {
     char dom[255];
@@ -34,7 +41,6 @@ static long isbWrite( aSubRecord *prec) {
 
         sprintf(scriptCommand,"%s %s %s %s %d",pythonPath,scriptPath,dom,barcode,position);
         system(scriptCommand);
-        //printf("Will run: %s\n",scriptCommand);
     }
     *(unsigned short*)prec->vala = 1;
     return(0);
