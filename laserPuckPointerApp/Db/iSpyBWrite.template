@@ -3,7 +3,12 @@
 # 
 # Runs a python script that writes the selected puck into or out of the
 # ISpyB databas
-
+# For this to work the following support modules need to be at least
+# the following versions:
+#
+# mitsubishiRobot     2-6
+# FQCRBarcodeCamera   1-2
+#
 # % macro, p, Prefix
 # % macro, s, Suffix
 # % macro, positionPV, PV where the last loaded / unloaded puck position will be
