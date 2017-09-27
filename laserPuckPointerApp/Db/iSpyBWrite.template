@@ -22,10 +22,14 @@ record(aSub, "$(P)$(S):ISPYB_WRITE") {
   field(INPC, "$(P)$(S):INIT_ISPYB_WRITE")
   field(INPD, "$(robot):FQCR_CAM:BARCODE_STORE")
   field(INPE, "$(robot):PUCK_POSITION CP")
+  field(INPF, "$(P)$(S):ISPYB_WRITE_ENABLE")
+  field(INPG, "$(P)$(S):ISPYB_DEBUG_ENABLE")
   field(FTA, "STRING")
   field(FTB, "USHORT")
   field(FTC, "USHORT")
   field(FTD, "STRING")
+  field(FTF, "USHORT")
+  field(FTG, "USHORT")
   field(OUTA, "$(P)$(S):INIT_ISPYB_WRITE PP")
   field(FTVA, "USHORT")
   field(SCAN, "Passive")
@@ -38,6 +42,14 @@ record(stringin, $(P)$(S):DBDOM) {
 
 record(bo, $(P)$(S):INIT_ISPYB_WRITE) {
   field(VAL, "0")
+}
+
+#% autosave 1 VAL
+record(ai, $(P)$(S):ISPYB_WRITE_ENABLE) {
+}
+
+#% autosave 1 VAL
+record(ai, $(P)$(S):ISPYB_DEBUG_ENABLE) {
 }
 
 record(ai, $(P)$(S):POSITION_READ) {
