@@ -34,8 +34,8 @@ static long isbWrite( aSubRecord *prec) {
     char pythonPath[] = "/dls_sw/apps/python/anaconda/1.7.0/64/bin/python";
 
     unsigned short initialised = *(unsigned short *)prec->c;
-    unsigned short writeEnable = *(unsigned short *)prec->f;
-    unsigned short debugEnable = *(unsigned short *)prec->g;
+    unsigned short writeEnable = *(unsigned short *)prec->e;
+    unsigned short debugEnable = *(unsigned short *)prec->f;
     if(initialised > 0){
         strcpy(dom,prec->a);
         position = *(unsigned short*)prec->b;
