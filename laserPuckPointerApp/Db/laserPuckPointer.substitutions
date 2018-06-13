@@ -102,6 +102,6 @@ pattern { P,	S,	PORT,		PUCK,	DEMAND,			PANPOS,	TILTPOS,	BANK}
 
 file iSpyBWrite.template
 {
-pattern { P,	S,  positionPV, robot,      bl}
-	    { \$(P),	"",	\$(DEMAND_IN), \$(ROBOT)    \$(BL)}
+pattern { P,	    S,      positionPV,     robot,      bl,         version}
+	    { \$(P),	"",	    \$(DEMAND_IN),  \$(ROBOT)    \$(BL),    \$(VERS)}
 }

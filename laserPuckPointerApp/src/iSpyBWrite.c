@@ -26,16 +26,27 @@
     
 */
 static long isbWrite( aSubRecord *prec) {
-    char dom[255];
+    char dom[255], ver[255];
     char scriptCommand[255];
     char barcode[255];
     unsigned short position;
-    char scriptPath[] = "/dls_sw/apps/ispyb-api/ispyb/assignPucks.py";
+    char scriptPath[255];
     char pythonPath[] = "/dls_sw/apps/python/anaconda/1.7.0/64/bin/python";
 
     unsigned short initialised = *(unsigned short *)prec->c;
     unsigned short writeEnable = *(unsigned short *)prec->e;
     unsigned short debugEnable = *(unsigned short *)prec->f;
+
+    strcpy(ver,prec->g);
+
+    if(strcmp(ver,"work") == 0){
+        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/laserPuckPointerApp/src/assignPucks.py");
+    }else{
+        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/");
+        strcat(scriptPath,ver);
+        strcat(scriptPath,"/laserPuckPointerApp/src/assignPucks.py");
+    }  
+
     if(initialised > 0){
         strcpy(dom,prec->a);
         position = *(unsigned short*)prec->b;

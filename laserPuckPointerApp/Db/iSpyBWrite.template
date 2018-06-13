@@ -14,6 +14,7 @@
 # % macro, positionPV, PV where the last loaded / unloaded puck position will be
 # % macro, bl, Beamline (used as arg in python script)
 # % macro, robot, Prefix for the robot where the barcodes are stored
+# % macro, version, Version used of this support module
 
 record(aSub, "$(P)$(S):ISPYB_WRITE") {
   field(SNAM, "isbWrite")
@@ -23,12 +24,14 @@ record(aSub, "$(P)$(S):ISPYB_WRITE") {
   field(INPD, "$(robot):FQCR_CAM:BARCODE_STORE")
   field(INPE, "$(P)$(S):ISPYB_WRITE_ENABLE")
   field(INPF, "$(P)$(S):ISPYB_DEBUG_ENABLE")
+  field(INPG, "$(P)$(S):LPP_VERS")
   field(FTA, "STRING")
   field(FTB, "USHORT")
   field(FTC, "USHORT")
   field(FTD, "STRING")
   field(FTE, "USHORT")
   field(FTF, "USHORT")
+  field(FTG, "STRING")
   field(OUTA, "$(P)$(S):INIT_ISPYB_WRITE PP")
   field(FTVA, "USHORT")
   field(SCAN, "Passive")
@@ -37,6 +40,10 @@ record(aSub, "$(P)$(S):ISPYB_WRITE") {
 
 record(stringin, $(P)$(S):DBDOM) {
   field(VAL, "$(bl)")
+}
+
+record(stringin, $(P)$(S):LPP_VERS) {
+  field(VAL, "$(version)")
 }
 
 record(bo, $(P)$(S):INIT_ISPYB_WRITE) {
