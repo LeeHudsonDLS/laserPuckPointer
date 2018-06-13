@@ -16,6 +16,9 @@ class laserPuckPointer(AutoSubstitution, AutoProtocol ):
     ProtocolFiles = ['laserPuckPointer.proto']
     Dependencies = (laserPuckPointerLib, AsynIP  )
     scanList = ['.1 second','.2 second','.5 second','1 second','2 second','5 second','10 second','I/O Intr','Event','Passive']
+    versions = subprocess.check_output(['dls-list-releases.py', 'laserPuckPointer'])
+    verChoice = versions.split()
+    verChoice.insert(0,'work')
     ArgInfo = makeArgInfo(
         P = Simple("Device Prefix", str),
         PORT = Ident("Asyn Port", AsynIP),
@@ -23,5 +26,6 @@ class laserPuckPointer(AutoSubstitution, AutoProtocol ):
         SCAN = Choice("Scan time", scanList),
         ROBOT = Simple("Robot prefix", str),
         BL = Simple("Beamline prefix to run iSpyB write script", str),
+        VERS = Choice("Version of this support module used", verChoice),
     )
 
