@@ -22,7 +22,8 @@ if puckposition < 1 or puckposition > 37:
 	sys.exit()
 import ispyb.factory, ispyb
 #config_file = "/dls_sw/dasc/mariadb/credentials/ispyb.cfg"
-config_file = "/home/ndg63276/pythonmodules/ispyb/ispyb.cfg"
+#config_file = "/home/ndg63276/pythonmodules/ispyb/ispyb.cfg"
+config_file = sys.argv[4]
 
 with ispyb.open(config_file) as conn:
     shipping = ispyb.factory.create_data_area(ispyb.factory.DataAreaType.SHIPPING, conn)
