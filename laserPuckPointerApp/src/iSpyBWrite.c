@@ -42,7 +42,7 @@ static long isbWrite( aSubRecord *prec) {
     if(strcmp(ver,"work") == 0){
         strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/laserPuckPointerApp/src/");
     }else{
-        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/");
+        strcpy(scriptPath,"/dls_sw/prod/R3.14.12.3/support/laserPuckPointer/");
         strcat(scriptPath,ver);
         strcat(scriptPath,"/laserPuckPointerApp/src/");
     }  
