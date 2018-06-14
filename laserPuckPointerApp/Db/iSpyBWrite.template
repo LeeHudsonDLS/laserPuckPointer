@@ -11,7 +11,7 @@
 #
 # % macro, p, Prefix
 # % macro, s, Suffix
-# % macro, positionPV, PV where the last loaded / unloaded puck position will be
+# % macro, positionPV, Parent PV (BL03I-MO-ROBOT-01:PUCK_POSITION not BL03I-MO-ROBOT-01:PUCK_POSITION.A) where the last loaded / unloaded puck position will be
 # % macro, bl, Beamline (used as arg in python script)
 # % macro, robot, Prefix for the robot where the barcodes are stored
 # % macro, version, Version used of this support module
@@ -58,10 +58,15 @@ record(ai, $(P)$(S):ISPYB_WRITE_ENABLE) {
 record(ai, $(P)$(S):ISPYB_DEBUG_ENABLE) {
 }
 
-record(ai, $(P)$(S):POSITION_READ) {
-  field(INP, "$(positionPV) CP")
+record(calc, $(P)$(S):POSITION_READ) {
+  field(INPA, "$(positionPV) CP")
+  field(INPB, "$(positionPV).A")
+  field(CALC, "B")
   field(MDEL, "-1")
+
 }
+
+
 
 # End of support/laserPuckPointer/laserPuckPointerApp/Db/iSpyBWrite.template
 
