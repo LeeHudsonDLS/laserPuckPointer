@@ -40,11 +40,11 @@ static long isbWrite( aSubRecord *prec) {
     strcpy(ver,prec->g);
 
     if(strcmp(ver,"work") == 0){
-        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/laserPuckPointerApp/src/assignPucks.py");
+        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/laserPuckPointerApp/src/");
     }else{
         strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/");
         strcat(scriptPath,ver);
-        strcat(scriptPath,"/laserPuckPointerApp/src/assignPucks.py");
+        strcat(scriptPath,"/laserPuckPointerApp/src/");
     }  
 
     if(initialised > 0){
@@ -52,7 +52,7 @@ static long isbWrite( aSubRecord *prec) {
         position = *(unsigned short*)prec->b;
         strcpy(barcode,prec->d);
 
-        sprintf(scriptCommand,"%s %s %s %s %d",pythonPath,scriptPath,dom,barcode,position);
+        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb.cfg",pythonPath,scriptPath,dom,barcode,position,scriptPath);
         if(debugEnable == 1){
             if(writeEnable == 1){
                 printf("Ran: %s\n",scriptCommand);
