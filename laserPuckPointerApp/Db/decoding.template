@@ -23,7 +23,7 @@ record(ai, "$(P)$(S):DEMAND") {
 record(ao, "$(P)$(S):DEMAND_FROM_VISION_SYSTEM") {
   field(PINI, "NO")
   field(OUT, "$(P)$(S):DEMAND PP")
-  field(DOL, "$(DEMAND_IN) CP")
+  field(DOL, "$(DEMAND_IN).A CP")
   field(OMSL, "closed_loop")
 }
 ###################################################################################
