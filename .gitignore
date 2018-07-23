@@ -1,0 +1,9 @@
+*~
+O.*
+bin
+dbd
+db
+data
+lib
+.svn*
+iocs/*IOC*
