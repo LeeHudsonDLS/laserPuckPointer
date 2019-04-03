@@ -40,9 +40,9 @@ static long isbWrite( aSubRecord *prec) {
     strcpy(ver,prec->g);
 
     if(strcmp(ver,"work") == 0){
-        strcpy(scriptPath,"/dls_sw/work/R3.14.12.3/support/laserPuckPointer/laserPuckPointerApp/src/");
+        strcpy(scriptPath,"/dls_sw/work/R3.14.12.7/support/laserPuckPointer/laserPuckPointerApp/src/");
     }else{
-        strcpy(scriptPath,"/dls_sw/prod/R3.14.12.3/support/laserPuckPointer/");
+        strcpy(scriptPath,"/dls_sw/prod/R3.14.12.7/support/laserPuckPointer/");
         strcat(scriptPath,ver);
         strcat(scriptPath,"/laserPuckPointerApp/src/");
     }  
