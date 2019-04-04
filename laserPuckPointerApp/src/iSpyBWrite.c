@@ -28,10 +28,11 @@
 static long isbWrite( aSubRecord *prec) {
     char dom[255], ver[255];
     char scriptCommand[255];
-    char barcode[255];
+    char barcode[255], configPath[255];
     unsigned short position;
     char scriptPath[255];
     char pythonPath[] = "/dls_sw/apps/python/anaconda/1.7.0/64/bin/python";
+    
 
     unsigned short initialised = *(unsigned short *)prec->c;
     unsigned short writeEnable = *(unsigned short *)prec->e;
@@ -47,12 +48,14 @@ static long isbWrite( aSubRecord *prec) {
         strcat(scriptPath,"/laserPuckPointerApp/src/");
     }  
 
+    strcpy(configPath,"/dls_sw/dasc/mariadb/credentials/");
+
     if(initialised > 0){
         strcpy(dom,prec->a);
         position = *(unsigned short*)prec->b;
         strcpy(barcode,prec->d);
 
-        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb.cfg",pythonPath,scriptPath,dom,barcode,position,scriptPath);
+        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb-mxdetector.cfg",pythonPath,scriptPath,dom,barcode,position,configPath);
         if(debugEnable == 1){
             if(writeEnable == 1){
                 printf("Ran: %s\n",scriptCommand);
