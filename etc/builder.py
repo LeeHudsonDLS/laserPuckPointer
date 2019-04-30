@@ -18,6 +18,7 @@ class laserPuckPointer(AutoSubstitution, AutoProtocol ):
     scanList = ['.1 second','.2 second','.5 second','1 second','2 second','5 second','10 second','I/O Intr','Event','Passive']
     versions = subprocess.check_output(['dls-list-releases.py', 'laserPuckPointer'])
     versions = versions.replace("'","")
+    versions = versions.replace(" ","")
     verChoice = versions.split('[')
     verChoice = verChoice[1].split(']')[0].split(',')
     
