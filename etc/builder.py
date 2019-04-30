@@ -17,7 +17,10 @@ class laserPuckPointer(AutoSubstitution, AutoProtocol ):
     Dependencies = (laserPuckPointerLib, AsynIP  )
     scanList = ['.1 second','.2 second','.5 second','1 second','2 second','5 second','10 second','I/O Intr','Event','Passive']
     versions = subprocess.check_output(['dls-list-releases.py', 'laserPuckPointer'])
-    verChoice = versions.split()
+    versions = versions.replace("'","")
+    verChoice = versions.split('[')
+    verChoice = verChoice[1].split(']')[0].split(',')
+    
     verChoice.insert(0,'work')
     ArgInfo = makeArgInfo(
         P = Simple("Device Prefix", str),
