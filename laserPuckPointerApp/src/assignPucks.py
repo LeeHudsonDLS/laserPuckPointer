@@ -1,6 +1,8 @@
 #!/dls_sw/apps/python/anaconda/1.7.0/64/bin/python
 
 import sys,re
+import requests
+url='https://ispyb.diamond.ac.uk/api/proposal/auto'
 
 print "Running "+str(sys.argv)
 try:
@@ -30,10 +32,28 @@ with ispyb.open(config_file) as conn:
     try:
         rs = shipping.update_container_assign(beamline, barcode, puckposition)
         containerId = rs[0]['containerId']
+        # queuedCount introduced as part of ticket SCI-8642
+        queuedCount = rs[0]['queuedCount']
         if rs[0]['containerStatus'] == 'processing':
             load_unload = ' loaded'
+            if queuedCount > 0:
+                payload = {'CONTAINERID': containerId, 'bl':beamline}
+                r = requests.get(url, params=payload)
+                if r.status_code == 200:
+                    print "Visit created: " + r.json()["VISIT"]
+                else:
+                    print "Error creating visit: " + r.text
+
         else:
             load_unload = ' unloaded'
+            if queuedCount > 0:
+                payload = {'CONTAINERID': containerId}
+                r = requests.delete(url, params=payload)
+                if r.status_code == 200:
+                    print "Visit closed: " + r.json()["VISIT"]
+                else:
+                    print "Error closing visit: " + r.text
+
         print "assignPucks: Puck "+barcode+load_unload+" - containerId: "+str(containerId)
     except:
         print "assignPucks: Puck with barcode "+barcode+" not found."
