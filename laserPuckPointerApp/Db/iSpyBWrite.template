@@ -25,6 +25,7 @@ record(aSub, "$(P)$(S):ISPYB_WRITE") {
   field(INPE, "$(P)$(S):ISPYB_WRITE_ENABLE")
   field(INPF, "$(P)$(S):ISPYB_DEBUG_ENABLE")
   field(INPG, "$(P)$(S):LPP_VERS")
+  field(INPH, "$(P)$(S):BASE_PV")
   field(FTA, "STRING")
   field(FTB, "USHORT")
   field(FTC, "USHORT")
@@ -32,6 +33,7 @@ record(aSub, "$(P)$(S):ISPYB_WRITE") {
   field(FTE, "USHORT")
   field(FTF, "USHORT")
   field(FTG, "STRING")
+  field(FTH, "STRING")
   field(OUTA, "$(P)$(S):INIT_ISPYB_WRITE PP")
   field(FTVA, "USHORT")
   field(SCAN, "Passive")
@@ -44,6 +46,14 @@ record(stringin, $(P)$(S):DBDOM) {
 
 record(stringin, $(P)$(S):LPP_VERS) {
   field(VAL, "$(version)")
+}
+
+# PV to store the base of the PVs used in this template.
+# This is used by the $(P)$(S):ISPYB_WRITE asub record to
+# tell the assignPuck.py script what the name of the PV
+# for displaying the auto collect flag will be.
+record(stringin, $(P)$(S):BASE_PV) {
+  field(VAL, "$(P)$(S)")
 }
 
 record(bo, $(P)$(S):INIT_ISPYB_WRITE) {
@@ -66,6 +76,82 @@ record(calc, $(P)$(S):POSITION_READ) {
 
 }
 
+# Records to store the state of the autocollect flags in ispyb. These PVs are written to by the
+# assignPuck.py script.
+record(bi, $(P)$(S):PUCK01_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK02_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK03_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK04_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK05_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK06_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK07_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK08_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK09_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK10_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK11_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK12_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK13_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK14_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK15_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK16_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK17_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK18_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK19_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK20_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK21_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK22_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK23_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK24_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK25_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK26_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK27_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK28_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK29_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK30_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK31_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK32_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK33_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK34_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK35_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK36_AUTO_COLLECT){
+}
+record(bi, $(P)$(S):PUCK37_AUTO_COLLECT){
+}
 
 #git
 # End of support/laserPuckPointer/laserPuckPointerApp/Db/iSpyBWrite.template

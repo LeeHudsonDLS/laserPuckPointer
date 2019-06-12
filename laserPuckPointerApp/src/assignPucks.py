@@ -2,6 +2,8 @@
 
 import sys,re
 import requests
+from epics import caput
+
 url='https://ispyb.diamond.ac.uk/api/proposal/auto'
 
 print "Running "+str(sys.argv)
@@ -27,6 +29,9 @@ import ispyb.factory, ispyb
 #config_file = "/home/ndg63276/pythonmodules/ispyb/ispyb.cfg"
 config_file = sys.argv[4]
 
+#Clear auto collect flag PV
+caput(sys.argv[5],0)
+
 with ispyb.open(config_file) as conn:
     shipping = ispyb.factory.create_data_area(ispyb.factory.DataAreaType.SHIPPING, conn)
     try:
@@ -41,6 +46,8 @@ with ispyb.open(config_file) as conn:
                 r = requests.get(url, params=payload)
                 if r.status_code == 200:
                     print "Visit created: " + r.json()["VISIT"]
+                    #Set auto collect flag PV
+                    caput(sys.argv[5],1)
                 else:
                     print "Error creating visit: " + r.text
 

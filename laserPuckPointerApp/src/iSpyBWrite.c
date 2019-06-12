@@ -26,7 +26,7 @@
     
 */
 static long isbWrite( aSubRecord *prec) {
-    char dom[255], ver[255];
+    char dom[255], ver[255], autoCollectPV[255], puckPVSuffix[40];
     char scriptCommand[255];
     char barcode[255], configPath[255];
     unsigned short position;
@@ -53,9 +53,16 @@ static long isbWrite( aSubRecord *prec) {
     if(initialised > 0){
         strcpy(dom,prec->a);
         position = *(unsigned short*)prec->b;
+
+        //Get the PV to store the autocollect value in
+        strcpy(autoCollectPV,prec->h);
+        sprintf(puckPVSuffix,":PUCK%02d_AUTO_COLLECT",position);
+        strcat(autoCollectPV,puckPVSuffix);
+
+
         strcpy(barcode,prec->d);
 
-        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb-mxdetector.cfg",pythonPath,scriptPath,dom,barcode,position,configPath);
+        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb-mxdetector.cfg %s",pythonPath,scriptPath,dom,barcode,position,configPath,autoCollectPV);
         if(debugEnable == 1){
             if(writeEnable == 1){
                 printf("Ran: %s\n",scriptCommand);

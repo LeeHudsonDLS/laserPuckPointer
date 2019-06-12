@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 400
-y 180
+x 918
+y 207
 w 600
 h 320
 font "arial-medium-r-18.0"
@@ -313,20 +313,20 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 23
-y 264
-w 102
+x 151
+y 268
+w 112
 h 24
 fgColor index 43
 bgColor index 5
 topShadowColor index 1
 botShadowColor index 11
 font "arial-medium-r-18.0"
-buttonLabel "Teach"
+buttonLabel "Auto Collect"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "teachGui.edl"
+  0 "autoCollectStat.edl"
 }
 symbols {
   0 "P=$(P)"
@@ -426,5 +426,31 @@ fgAlarm
 bgColor index 0
 fill
 font "arial-medium-r-18.0"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 26
+y 268
+w 102
+h 24
+fgColor index 43
+bgColor index 5
+topShadowColor index 1
+botShadowColor index 11
+font "arial-medium-r-18.0"
+buttonLabel "Teach"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "teachGui.edl"
+}
+symbols {
+  0 "P=$(P)"
+}
 endObjectProperties
 
