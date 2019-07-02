@@ -1,5 +1,6 @@
 #File: 	manualControl.template
 #Desc:	Allows direct control of Pan, Tilt, Mode and laser.
+# % gui, $(name), edm, manualControl.edl, P=$(P)$(S)
 record(ai, $(P)$(S):PAN_POSITION_RBV) {
   field(DESC, "Laser puck pointer pan axis readback")
   field(SCAN, "$(SCAN)")

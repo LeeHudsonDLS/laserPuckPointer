@@ -1,1 +1,3 @@
 # Place any example specific dependencies here
+ASYN=           $(SUPPORT)/asyn/4-34
+STREAMS=     $(SUPPORT)/streamDevice/2-5dls11
