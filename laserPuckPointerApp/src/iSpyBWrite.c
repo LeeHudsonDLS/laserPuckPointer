@@ -62,7 +62,7 @@ static long isbWrite( aSubRecord *prec) {
 
         strcpy(barcode,prec->d);
 
-        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb-mxdetector.cfg %s",pythonPath,scriptPath,dom,barcode,position,configPath,autoCollectPV);
+        sprintf(scriptCommand,"%s %sassignPucks.py %s %s %d %sispyb-mxdetector.cfg %s &",pythonPath,scriptPath,dom,barcode,position,configPath,autoCollectPV);
         if(debugEnable == 1){
             if(writeEnable == 1){
                 printf("Ran: %s\n",scriptCommand);
