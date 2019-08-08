@@ -14,6 +14,16 @@ record(calcout, $(P)$(S):LASER_ON_COUNTER_CALC) {
 
 }
 
+record(calcout, $(P):ZERO_LASER_COUNTER) {
+  field(INPA, "$(P):DEMAND CP")
+  field(INPB, "$(P):TILT_POSITION_VAL CP")
+  field(INPC, "$(P):PAN_POSITION_VAL CP")
+  field(OUT, "$(P):LASER_ON_TIMER PP")
+  field(SCAN, "Passive")
+  field(CALC, "0")
+
+}
+
 record(ai, $(P)$(S):LASER_ON_TIMER) {
    field(VAL, "0")
 }
