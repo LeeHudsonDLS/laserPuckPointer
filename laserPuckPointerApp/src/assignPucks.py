@@ -2,7 +2,7 @@
 
 import sys,re
 import requests
-from epics import caput
+from epics import caput, caget
 
 url='https://ispyb.diamond.ac.uk/api/proposal/auto'
 
@@ -29,8 +29,9 @@ import ispyb.factory, ispyb
 #config_file = "/home/ndg63276/pythonmodules/ispyb/ispyb.cfg"
 config_file = sys.argv[4]
 
+visit = caget(sys.argv[5])
 #Clear auto collect flag PV
-caput(sys.argv[5],0)
+caput(sys.argv[5],"")
 
 with ispyb.open(config_file) as conn:
     shipping = ispyb.factory.create_data_area(ispyb.factory.DataAreaType.SHIPPING, conn)
@@ -47,19 +48,25 @@ with ispyb.open(config_file) as conn:
                 if r.status_code == 200:
                     print "Visit created: " + r.json()["VISIT"]
                     #Set auto collect flag PV
-                    caput(sys.argv[5],1)
+                    caput(sys.argv[5], r.json()["VISIT"])
                 else:
                     print "Error creating visit: " + r.text
 
         else:
             load_unload = ' unloaded'
             if queuedCount > 0:
-                payload = {'CONTAINERID': containerId}
-                r = requests.delete(url, params=payload)
-                if r.status_code == 200:
-                    print "Visit closed: " + r.json()["VISIT"]
-                else:
-                    print "Error closing visit: " + r.text
+                visit_finished = True
+                for i in range(1,38):
+                    pv = re.sub(r'PUCK[0-9][0-9]','PUCK'+str(i).zfill(2),sys.argv[5])
+                    if caget(pv) == visit:
+                        visit_finished = False
+                if visit_finished:
+                    payload = {'CONTAINERID': containerId}
+                    r = requests.delete(url, params=payload)
+                    if r.status_code == 200:
+                        print "Visit closed: " + r.json()["VISIT"]
+                    else:
+                        print "Error closing visit: " + r.text
 
         print "assignPucks: Puck "+barcode+load_unload+" - containerId: "+str(containerId)
     except:

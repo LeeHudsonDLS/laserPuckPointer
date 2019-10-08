@@ -78,79 +78,79 @@ record(calc, $(P)$(S):POSITION_READ) {
 
 # Records to store the state of the autocollect flags in ispyb. These PVs are written to by the
 # assignPuck.py script.
-record(bi, $(P)$(S):PUCK01_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK01_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK02_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK02_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK03_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK03_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK04_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK04_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK05_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK05_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK06_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK06_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK07_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK07_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK08_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK08_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK09_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK09_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK10_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK10_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK11_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK11_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK12_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK12_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK13_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK13_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK14_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK14_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK15_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK15_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK16_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK16_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK17_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK17_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK18_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK18_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK19_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK19_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK20_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK20_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK21_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK21_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK22_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK22_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK23_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK23_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK24_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK24_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK25_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK25_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK26_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK26_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK27_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK27_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK28_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK28_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK29_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK29_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK30_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK30_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK31_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK31_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK32_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK32_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK33_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK33_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK34_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK34_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK35_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK35_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK36_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK36_AUTO_COLLECT){
 }
-record(bi, $(P)$(S):PUCK37_AUTO_COLLECT){
+record(stringin, $(P)$(S):PUCK37_AUTO_COLLECT){
 }
 
 #git
