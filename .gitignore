@@ -8,3 +8,4 @@ lib
 .svn*
 iocs/
 documentation/doxygen/
+.idea
